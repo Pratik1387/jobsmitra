@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>JobsMitra Results</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: #f3f6fb;
+padding:40px;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+}
+
+h1{
+text-align:center;
+color:#2c3e50;
+}
+
+.job-card{
+
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+box-shadow:0px 4px 10px rgba(0,0,0,0.1);
+
+}
+
+.job-title{
+
+font-size:20px;
+font-weight:bold;
+color:#2c3e50;
+
+}
+
+.salary{
+
+color:#27ae60;
+font-weight:bold;
+margin-top:8px;
+
+}
+
+.apply-btn{
+
+display:inline-block;
+margin-top:10px;
+padding:10px 15px;
+background:#3498db;
+color:white;
+text-decoration:none;
+border-radius:6px;
+
+}
+
+.apply-btn:hover{
+
+background:#2980b9;
+
+}
+
+.back{
+
+margin-top:20px;
+display:inline-block;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<h1>Eligible Jobs</h1>
+
+{% if jobs %}
+
+{% for job in jobs %}
+
+<div class="job-card">
+
+<div class="job-title">{{ job.job_title }}</div>
+
+<p>Age Limit: {{ job.min_age }} - {{ job.max_age }}</p>
+
+<p>Education: {{ job.education | join(', ') }}</p>
+
+<p>State: {{ job.state }}</p>
+
+<p class="salary">
+Salary: ₹{{ job.salary_min }} - ₹{{ job.salary_max }} / month
+</p>
+
+<a class="apply-btn" href="{{ job.apply_link }}" target="_blank">
+Apply Now
+</a>
+
+</div>
+
+{% endfor %}
+
+{% else %}
+
+<p>No eligible jobs found.</p>
+
+{% endif %}
+
+<a class="back" href="/">← Check Again</a>
+
+</div>
+
+</body>
+
+</html>

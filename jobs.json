@@ -1,0 +1,56 @@
+[
+  {
+    "job_title": "SSC MTS",
+    "min_age": 18,
+    "max_age": 25,
+    "education": ["10th","12th"],
+    "state": "All",
+    "salary_min": 18000,
+    "salary_max": 22000,
+    "apply_link": "https://ssc.nic.in"
+  },
+
+  {
+    "job_title": "RRB Group D",
+    "min_age": 18,
+    "max_age": 33,
+    "education": ["10th","12th"],
+    "state": "All",
+    "salary_min": 18000,
+    "salary_max": 25000,
+    "apply_link": "https://indianrailways.gov.in"
+  },
+
+  {
+    "job_title": "Police Constable Maharashtra",
+    "min_age": 18,
+    "max_age": 28,
+    "education": ["12th"],
+    "state": "Maharashtra",
+    "salary_min": 21000,
+    "salary_max": 30000,
+    "apply_link": "https://mahapolice.gov.in"
+  },
+
+  {
+    "job_title": "Forest Guard Maharashtra",
+    "min_age": 18,
+    "max_age": 27,
+    "education": ["12th"],
+    "state": "Maharashtra",
+    "salary_min": 21700,
+    "salary_max": 35000,
+    "apply_link": "https://mahaforest.gov.in"
+  },
+
+  {
+    "job_title": "CTET",
+    "min_age": 18,
+    "max_age": 40,
+    "education": ["12th","Graduate"],
+    "state": "All",
+    "salary_min": 35000,
+    "salary_max": 65000,
+    "apply_link": "https://ctet.nic.in"
+  }
+]
