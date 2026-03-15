@@ -1,68 +1,151 @@
-from flask import Flask, render_template, request
-import json
-from datetime import datetime
+[
+{
+"job_title": "SSC MTS",
+"organization": "Staff Selection Commission",
+"education_required": "10th",
+"min_age": 18,
+"max_age": 25,
+"state": "All",
+"salary_min": 18000,
+"salary_max": 22000,
+"application_start": "2026-04-10",
+"application_end": "2026-05-10",
+"apply_link": "https://ssc.nic.in",
+"source": "FreeJobAlert"
+},
 
-app = Flask(__name__)
+{
+"job_title": "SSC CHSL",
+"organization": "Staff Selection Commission",
+"education_required": "12th",
+"min_age": 18,
+"max_age": 27,
+"state": "All",
+"salary_min": 25000,
+"salary_max": 42000,
+"application_start": "2026-05-01",
+"application_end": "2026-05-30",
+"apply_link": "https://ssc.nic.in",
+"source": "FreeJobAlert"
+},
 
-education_levels = ["10th", "12th", "Graduate"]
+{
+"job_title": "SSC CGL",
+"organization": "Staff Selection Commission",
+"education_required": "Graduate",
+"min_age": 21,
+"max_age": 32,
+"state": "All",
+"salary_min": 35000,
+"salary_max": 60000,
+"application_start": "2026-06-01",
+"application_end": "2026-06-30",
+"apply_link": "https://ssc.nic.in",
+"source": "FreeJobAlert"
+},
 
-def calculate_age(dob):
-    today = datetime.today()
-    dob = datetime.strptime(dob, "%Y-%m-%d")
-    age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
-    return age
+{
+"job_title": "RRB Group D",
+"organization": "Indian Railways",
+"education_required": "10th",
+"min_age": 18,
+"max_age": 33,
+"state": "All",
+"salary_min": 18000,
+"salary_max": 25000,
+"application_start": "2026-04-01",
+"application_end": "2026-04-30",
+"apply_link": "https://indianrailways.gov.in",
+"source": "IndGovtJobs"
+},
 
+{
+"job_title": "RRB NTPC",
+"organization": "Indian Railways",
+"education_required": "12th",
+"min_age": 18,
+"max_age": 30,
+"state": "All",
+"salary_min": 25000,
+"salary_max": 42000,
+"application_start": "2026-06-01",
+"application_end": "2026-06-30",
+"apply_link": "https://indianrailways.gov.in",
+"source": "IndGovtJobs"
+},
 
-@app.route("/", methods=["GET", "POST"])
-def home():
+{
+"job_title": "IBPS Clerk",
+"organization": "Institute of Banking Personnel Selection",
+"education_required": "Graduate",
+"min_age": 20,
+"max_age": 28,
+"state": "All",
+"salary_min": 29000,
+"salary_max": 42000,
+"application_start": "2026-07-01",
+"application_end": "2026-07-30",
+"apply_link": "https://ibps.in",
+"source": "SarkariNaukriBlog"
+},
 
-    if request.method == "POST":
+{
+"job_title": "IBPS PO",
+"organization": "Institute of Banking Personnel Selection",
+"education_required": "Graduate",
+"min_age": 20,
+"max_age": 30,
+"state": "All",
+"salary_min": 36000,
+"salary_max": 52000,
+"application_start": "2026-08-01",
+"application_end": "2026-08-30",
+"apply_link": "https://ibps.in",
+"source": "SarkariNaukriBlog"
+},
 
-        name = request.form.get("name")
-        dob = request.form.get("dob")
-        education = request.form.get("education")
-        state = request.form.get("state")
-        category = request.form.get("category")
+{
+"job_title": "Police Constable Maharashtra",
+"organization": "Maharashtra Police",
+"education_required": "12th",
+"min_age": 18,
+"max_age": 28,
+"state": "Maharashtra",
+"salary_min": 21000,
+"salary_max": 30000,
+"application_start": "2026-04-01",
+"application_end": "2026-04-20",
+"apply_link": "https://mahapolice.gov.in",
+"source": "Mahabharti"
+},
 
-        age = calculate_age(dob)
+{
+"job_title": "Forest Guard Maharashtra",
+"organization": "Maharashtra Forest Department",
+"education_required": "12th",
+"min_age": 18,
+"max_age": 27,
+"state": "Maharashtra",
+"salary_min": 21700,
+"salary_max": 35000,
+"application_start": "2026-04-05",
+"application_end": "2026-04-25",
+"apply_link": "https://mahaforest.gov.in",
+"source": "Mahabharti"
+},
 
-        with open("jobs.json") as f:
-            jobs = json.load(f)
-
-        eligible_jobs = []
-
-        for job in jobs:
-
-            min_age = job["min_age"]
-            max_age = job["max_age"]
-
-            # Apply category relaxation
-            if category == "SC":
-                max_age += 5
-            elif category == "ST":
-                max_age += 5
-            elif category == "OBC":
-                max_age += 3
-
-            # Age check
-            if min_age <= age <= max_age:
-
-                # Education check
-                user_level = education_levels.index(education)
-                job_levels = [education_levels.index(e) for e in job["education"]]
-
-                if user_level >= min(job_levels):
-
-                    # State check
-                    if job["state"] == "All" or job["state"] == state:
-
-                        eligible_jobs.append(job)
-
-        return render_template("result.html", jobs=eligible_jobs)
-
-    return render_template("index.html")
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
-
+{
+"job_title": "CTET Teacher Eligibility",
+"organization": "CBSE",
+"education_required": "Graduate",
+"min_age": 18,
+"max_age": 40,
+"state": "All",
+"salary_min": 35000,
+"salary_max": 65000,
+"application_start": "2026-06-01",
+"application_end": "2026-06-30",
+"apply_link": "https://ctet.nic.in",
+"source": "EmploymentNews"
+}
+]
