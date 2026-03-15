@@ -1,161 +1,111 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>JobsMitra</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<head>
+
+<title>JobsMitra</title>
 
 <style>
 
-*{
-box-sizing:border-box;
-}
-
 body{
-font-family:'Poppins',sans-serif;
-background:linear-gradient(135deg,#667eea,#764ba2);
-margin:0;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
+font-family: Arial;
+background:#f3f6fb;
+padding:40px;
 }
 
 .container{
-width:440px;
+max-width:700px;
+margin:auto;
 background:white;
-padding:35px;
-border-radius:20px;
-box-shadow:0 20px 45px rgba(0,0,0,0.25);
+padding:30px;
+border-radius:10px;
+box-shadow:0px 4px 10px rgba(0,0,0,0.1);
 }
 
-.title{
+h1{
 text-align:center;
-font-size:30px;
-font-weight:600;
 color:#2c3e50;
 }
 
-.subtitle{
-text-align:center;
-font-size:14px;
-color:#7f8c8d;
-margin-bottom:25px;
-}
-
-.field-card{
-padding:14px;
-border-radius:14px;
-margin-bottom:14px;
-background:#f4f6fb;
-transition:0.2s;
-}
-
-.field-card:hover{
-background:#eaf1ff;
-}
-
 label{
-font-size:13px;
-color:#555;
 display:block;
-margin-bottom:4px;
+margin-top:15px;
+font-weight:bold;
 }
 
 input,select{
 width:100%;
 padding:10px;
-border:none;
-border-radius:8px;
-background:white;
-box-shadow:0 2px 6px rgba(0,0,0,0.08);
-font-size:14px;
-}
-
-input:focus,select:focus{
-outline:none;
-box-shadow:0 0 0 2px #667eea;
+margin-top:5px;
+border-radius:6px;
+border:1px solid #ccc;
 }
 
 button{
+margin-top:20px;
+padding:12px;
 width:100%;
-padding:14px;
-border:none;
-border-radius:30px;
-background:linear-gradient(135deg,#00c6ff,#0072ff);
+background:#3498db;
 color:white;
+border:none;
+border-radius:6px;
 font-size:16px;
-font-weight:500;
 cursor:pointer;
-margin-top:10px;
 }
 
 button:hover{
-opacity:0.9;
-}
-
-.footer{
-text-align:center;
-margin-top:14px;
-font-size:12px;
-color:#aaa;
+background:#2980b9;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
-<div class="title">JobsMitra</div>
-<div class="subtitle">Find Government Jobs You Are Eligible For</div>
+<h1>JobsMitra</h1>
 
 <form method="POST">
 
-<div class="field-card">
 <label>Date of Birth</label>
 <input type="date" name="dob" required>
-</div>
 
-<div class="field-card">
 <label>Education</label>
-<select name="education">
-<option value="10th">10th Pass</option>
-<option value="12th">12th Pass</option>
+<select name="education" required>
+
+<option value="7th">7th / 8th Pass</option>
+<option value="10th">10th / Matriculation</option>
+<option value="ITI">ITI</option>
+<option value="12th">12th / Intermediate</option>
+<option value="Diploma">Diploma</option>
 <option value="Graduate">Graduate</option>
-</select>
-</div>
+<option value="Professional Graduate">Professional Graduate</option>
+<option value="Post Graduate">Post Graduate</option>
+<option value="PhD">PhD / Doctorate</option>
 
-<div class="field-card">
+</select>
+
 <label>State</label>
-<select name="state">
-<option value="All">All India</option>
-<option value="Maharashtra">Maharashtra</option>
-<option value="Gujarat">Gujarat</option>
-<option value="Rajasthan">Rajasthan</option>
-</select>
-</div>
+<input type="text" name="state" placeholder="Example: Maharashtra" required>
 
-<div class="field-card">
 <label>Category</label>
 <select name="category">
+
 <option value="General">General</option>
 <option value="OBC">OBC</option>
 <option value="SC">SC</option>
 <option value="ST">ST</option>
-</select>
-</div>
 
-<button type="submit">Find My Eligible Jobs</button>
+</select>
+
+<button type="submit">Check Eligible Jobs</button>
 
 </form>
-
-<div class="footer">
-Powered by TechMitra
-</div>
 
 </div>
 
 </body>
+
 </html>
