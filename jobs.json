@@ -1,56 +1,151 @@
 [
-  {
-    "job_title": "SSC MTS",
-    "min_age": 18,
-    "max_age": 25,
-    "education": ["10th","12th"],
-    "state": "All",
-    "salary_min": 18000,
-    "salary_max": 22000,
-    "apply_link": "https://ssc.nic.in"
-  },
+{
+"job_title": "SSC MTS",
+"organization": "Staff Selection Commission",
+"education_required": "10th",
+"min_age": 18,
+"max_age": 25,
+"state": "All",
+"salary_min": 18000,
+"salary_max": 22000,
+"application_start": "2026-04-10",
+"application_end": "2026-05-10",
+"apply_link": "https://ssc.nic.in",
+"source": "FreeJobAlert"
+},
 
-  {
-    "job_title": "RRB Group D",
-    "min_age": 18,
-    "max_age": 33,
-    "education": ["10th","12th"],
-    "state": "All",
-    "salary_min": 18000,
-    "salary_max": 25000,
-    "apply_link": "https://indianrailways.gov.in"
-  },
+{
+"job_title": "SSC CHSL",
+"organization": "Staff Selection Commission",
+"education_required": "12th",
+"min_age": 18,
+"max_age": 27,
+"state": "All",
+"salary_min": 25000,
+"salary_max": 42000,
+"application_start": "2026-05-01",
+"application_end": "2026-05-30",
+"apply_link": "https://ssc.nic.in",
+"source": "FreeJobAlert"
+},
 
-  {
-    "job_title": "Police Constable Maharashtra",
-    "min_age": 18,
-    "max_age": 28,
-    "education": ["12th"],
-    "state": "Maharashtra",
-    "salary_min": 21000,
-    "salary_max": 30000,
-    "apply_link": "https://mahapolice.gov.in"
-  },
+{
+"job_title": "SSC CGL",
+"organization": "Staff Selection Commission",
+"education_required": "Graduate",
+"min_age": 21,
+"max_age": 32,
+"state": "All",
+"salary_min": 35000,
+"salary_max": 60000,
+"application_start": "2026-06-01",
+"application_end": "2026-06-30",
+"apply_link": "https://ssc.nic.in",
+"source": "FreeJobAlert"
+},
 
-  {
-    "job_title": "Forest Guard Maharashtra",
-    "min_age": 18,
-    "max_age": 27,
-    "education": ["12th"],
-    "state": "Maharashtra",
-    "salary_min": 21700,
-    "salary_max": 35000,
-    "apply_link": "https://mahaforest.gov.in"
-  },
+{
+"job_title": "RRB Group D",
+"organization": "Indian Railways",
+"education_required": "10th",
+"min_age": 18,
+"max_age": 33,
+"state": "All",
+"salary_min": 18000,
+"salary_max": 25000,
+"application_start": "2026-04-01",
+"application_end": "2026-04-30",
+"apply_link": "https://indianrailways.gov.in",
+"source": "IndGovtJobs"
+},
 
-  {
-    "job_title": "CTET",
-    "min_age": 18,
-    "max_age": 40,
-    "education": ["12th","Graduate"],
-    "state": "All",
-    "salary_min": 35000,
-    "salary_max": 65000,
-    "apply_link": "https://ctet.nic.in"
-  }
+{
+"job_title": "RRB NTPC",
+"organization": "Indian Railways",
+"education_required": "12th",
+"min_age": 18,
+"max_age": 30,
+"state": "All",
+"salary_min": 25000,
+"salary_max": 42000,
+"application_start": "2026-06-01",
+"application_end": "2026-06-30",
+"apply_link": "https://indianrailways.gov.in",
+"source": "IndGovtJobs"
+},
+
+{
+"job_title": "IBPS Clerk",
+"organization": "Institute of Banking Personnel Selection",
+"education_required": "Graduate",
+"min_age": 20,
+"max_age": 28,
+"state": "All",
+"salary_min": 29000,
+"salary_max": 42000,
+"application_start": "2026-07-01",
+"application_end": "2026-07-30",
+"apply_link": "https://ibps.in",
+"source": "SarkariNaukriBlog"
+},
+
+{
+"job_title": "IBPS PO",
+"organization": "Institute of Banking Personnel Selection",
+"education_required": "Graduate",
+"min_age": 20,
+"max_age": 30,
+"state": "All",
+"salary_min": 36000,
+"salary_max": 52000,
+"application_start": "2026-08-01",
+"application_end": "2026-08-30",
+"apply_link": "https://ibps.in",
+"source": "SarkariNaukriBlog"
+},
+
+{
+"job_title": "Police Constable Maharashtra",
+"organization": "Maharashtra Police",
+"education_required": "12th",
+"min_age": 18,
+"max_age": 28,
+"state": "Maharashtra",
+"salary_min": 21000,
+"salary_max": 30000,
+"application_start": "2026-04-01",
+"application_end": "2026-04-20",
+"apply_link": "https://mahapolice.gov.in",
+"source": "Mahabharti"
+},
+
+{
+"job_title": "Forest Guard Maharashtra",
+"organization": "Maharashtra Forest Department",
+"education_required": "12th",
+"min_age": 18,
+"max_age": 27,
+"state": "Maharashtra",
+"salary_min": 21700,
+"salary_max": 35000,
+"application_start": "2026-04-05",
+"application_end": "2026-04-25",
+"apply_link": "https://mahaforest.gov.in",
+"source": "Mahabharti"
+},
+
+{
+"job_title": "CTET Teacher Eligibility",
+"organization": "CBSE",
+"education_required": "Graduate",
+"min_age": 18,
+"max_age": 40,
+"state": "All",
+"salary_min": 35000,
+"salary_max": 65000,
+"application_start": "2026-06-01",
+"application_end": "2026-06-30",
+"apply_link": "https://ctet.nic.in",
+"source": "EmploymentNews"
+}
 ]
